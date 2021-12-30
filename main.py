@@ -15,7 +15,6 @@ def living_neighbors(grid, x_pos, y_pos):
     total = 0
     for column in range(max(0, x_pos - 1), min(10, x_pos + 2)):
         for row in range(max(0, y_pos - 1), min(10, y_pos + 2)):
-            # print("{0}, {1}".format(row, column))
             if column == x_pos and row == y_pos:
                 continue
             else:
@@ -24,8 +23,6 @@ def living_neighbors(grid, x_pos, y_pos):
     return total
 
 def main():
-    # ball = pygame.image.load("intro_ball.gif")
-    # ballrect = ball.get_rect()
     pygame.init()
     screen = pygame.display.set_mode(size)
     screen.fill(black)
