@@ -51,13 +51,16 @@ def main():
             if event.type == pygame.MOUSEBUTTONUP:
                 x_pos, y_pos = pygame.mouse.get_pos()
                 x_pos = x_pos // (width + margin)
+                if x_pos == 10:
+                    x_pos = 9
                 y_pos = y_pos // (height + margin)
+                if y_pos == 10:
+                    y_pos = 9
                 grid[y_pos][x_pos] = 0 if grid[y_pos][x_pos] else 1
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
                     evolve = False if evolve else True
-                    print("Enter")
 
         # Game logic
         if evolve:
